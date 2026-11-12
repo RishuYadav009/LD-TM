@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#0B1F44">
+<title>LD-TM Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+<header class="site-header admin-header"><a class="brand" href="index.html"><span class="brand-mark">LD<span>↗</span></span><span class="brand-name">LD-TM<small>ADMIN CONSOLE</small></span></a><a class="text-link" href="index.html">← Back to website</a></header>
+<main class="admin-wrap">
+<section class="admin-login" id="login-panel">
+<div class="eyebrow">PRIVATE WORKSPACE</div><h1>Admin <span>sign in.</span></h1>
+<p class="admin-muted">Sign in with the authorized LD-TM administrator account.</p>
+<form id="login-form">
+<label>Email address<input type="email" id="admin-email" value="manipulator0009@gmail.com" readonly></label>
+<label>Password<input type="password" id="admin-password" autocomplete="current-password" required placeholder="Your admin password"></label>
+<button class="btn btn-primary" type="submit" id="login-button">Sign in <span>↗</span></button>
+<p class="admin-message" id="login-message" role="status"></p>
+</form>
+</section>
+<section class="admin-dashboard" id="dashboard-panel" hidden>
+<div class="dashboard-heading"><div><div class="eyebrow">LD-TM INBOX</div><h1>Project <span>enquiries.</span></h1><p class="admin-muted">Private customer enquiries submitted through your website.</p></div><button class="btn btn-outline" id="signout-button" type="button">Sign out</button></div>
+<div class="inbox-toolbar"><strong id="inquiry-count">0 enquiries</strong><button class="btn btn-outline" id="refresh-button" type="button">Refresh ↻</button></div>
+<div id="inquiry-list" class="inquiry-list"></div><p class="admin-message" id="dashboard-message" role="status"></p>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="admin.js"></script>
+</body></html>
