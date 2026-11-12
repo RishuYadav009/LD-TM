@@ -17,19 +17,35 @@ if (year) year.textContent = new Date().getFullYear();
 
 const form = document.querySelector("#enquiry-form");
 if (form) {
-  form.addEventListener("submit", event => {
+  const status = document.querySelector(".form-status");
+  form.addEventListener("submit", async event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
+    const submit = form.querySelector('button[type="submit"]');
+    submit.disabled = true;
+    submit.textContent = "Sending…";
+    status.textContent = "";
     const data = new FormData(form);
-    const subject = encodeURIComponent("LD-TM project enquiry — " + data.get("service"));
-    const body = encodeURIComponent(
-      "Name: " + data.get("name") + "\n" +
-      "Email: " + data.get("email") + "\n" +
-      "Service: " + data.get("service") + "\n\n" +
-      "Project details:\n" + data.get("message")
-    );
-    const status = document.querySelector(".form-status");
-    status.textContent = "Your email draft is ready. Review it and send it from your email app.";
-    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
+    const payload = {
+      name: String(data.get("name") || "").trim(),
+      email: String(data.get("email") || "").trim(),
+      service: String(data.get("service") || "").trim(),
+      details: String(data.get("message") || "").trim()
+    };
+    try {
+      if (!window.ldtmSupabase) throw new Error("The enquiry service is not configured yet. Please try again later.");
+      const { error } = await window.ldtmSupabase.from("inquiries").insert(payload);
+      if (error) throw error;
+      form.reset();
+      status.textContent = "Thanks — your enquiry has been received.";
+      status.classList.add("success");
+    } catch (error) {
+      console.error("Enquiry submission failed:", error);
+      status.textContent = "We couldn't submit your enquiry just now. Please try again in a moment.";
+      status.classList.remove("success");
+    } finally {
+      submit.disabled = false;
+      submit.innerHTML = 'Send enquiry <span>↗</span>';
+    }
   });
 }
