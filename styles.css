@@ -18,3 +18,8 @@
 .home-links b{font:700 15px Manrope;color:var(--navy)}
 .home-links span{font-size:11px;color:var(--muted);margin-top:8px}
 @media(max-width:680px){.page-intro{padding:55px 0 48px}.home-links{grid-template-columns:1fr;padding-top:25px;padding-bottom:45px}}
+
+
+/* LD-TM refined brand identity */
+.brand{gap:12px}.brand-mark{width:48px;height:44px;border-radius:12px;background:linear-gradient(145deg,#0B1F44,#17417d);box-shadow:0 5px 14px #0b1f4426;font-size:20px;letter-spacing:-2px;position:relative}.brand-mark span{color:#60a5fa}.brand-name{font-size:19px;letter-spacing:1.2px;font-weight:800}.brand-name small{font-size:7px;letter-spacing:1.05px;margin-top:4px}.brand-footer .brand-mark{background:linear-gradient(145deg,#173663,#0B1F44)}
+@media(max-width:680px){.brand-mark{width:44px;height:41px}.brand-name{font-size:17px}.brand-name small{font-size:6.5px;letter-spacing:.8px}}
