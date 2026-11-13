@@ -52,3 +52,15 @@
  .brand-wordmark strong{font-size:23px}
  .brand-wordmark small{font-size:6px;letter-spacing:.8px}
 }
+
+
+/* Approved complete SVG logo, embedded directly so it always renders */
+.site-header .brand{display:flex;align-items:center;flex:0 1 auto;min-width:0;gap:0}
+.brand-logo-svg{display:block;width:250px;height:auto;max-height:58px;overflow:visible}
+.footer-main .brand-logo-svg{width:250px;max-height:58px}
+@media(max-width:850px){.site-header .brand-logo-svg{width:220px;max-height:52px}}
+@media(max-width:680px){
+ .site-header .brand-logo-svg{width:190px;max-height:44px}
+ .footer-main .brand-logo-svg{width:220px;max-height:50px}
+}
+@media(max-width:360px){.site-header .brand-logo-svg{width:165px;max-height:40px}}
