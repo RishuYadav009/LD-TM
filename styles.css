@@ -39,3 +39,16 @@
 @media(max-width:360px){
   .site-header .brand-logo{width:165px;max-height:40px}
 }
+
+
+/* Reliable text-based LD-TM wordmark */
+.site-header .brand-wordmark,.footer-main .brand-wordmark{display:flex;flex-direction:column;justify-content:center;line-height:1}
+.brand-wordmark strong{font:800 26px/1 Manrope,"Arial",sans-serif;letter-spacing:1.2px;color:#0B1F44;white-space:nowrap}
+.brand-wordmark strong span{color:#3B82F6}
+.brand-wordmark small{display:block;margin-top:6px;font:700 7px/1.2 "DM Sans",Arial,sans-serif;letter-spacing:1.15px;color:#718096;white-space:nowrap}
+.brand-footer .brand-wordmark strong{color:#fff}
+.brand-footer .brand-wordmark small{color:#aebdd3}
+@media(max-width:680px){
+ .brand-wordmark strong{font-size:23px}
+ .brand-wordmark small{font-size:6px;letter-spacing:.8px}
+}
