@@ -64,3 +64,20 @@
  .footer-main .brand-logo-svg{width:220px;max-height:50px}
 }
 @media(max-width:360px){.site-header .brand-logo-svg{width:165px;max-height:40px}}
+
+
+/* Keep the full brand mark visible beside navigation */
+.site-header{gap:16px}
+.site-header .brand{flex:0 0 auto;min-width:max-content;overflow:visible}
+.site-header .brand-logo-svg{display:block;width:250px;height:54px;max-height:none;flex:none}
+.site-header .nav{flex:0 0 auto}
+@media(max-width:850px){
+ .site-header{height:74px}
+ .site-header .brand-logo-svg{width:210px;height:46px}
+ .site-header .menu-toggle{display:block}
+ .site-header .nav{display:none;position:absolute;top:73px;left:0;right:0;background:#fff;padding:14px 20px;box-shadow:0 12px 20px #0b1f4412;flex-direction:column;align-items:stretch;gap:0}
+ .site-header .nav.open{display:flex}
+ .site-header .nav a{padding:14px 8px}
+ .site-header .nav .nav-cta{text-align:center;margin-top:8px}
+}
+@media(max-width:390px){.site-header .brand-logo-svg{width:185px;height:40px}}
