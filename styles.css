@@ -23,3 +23,19 @@
 /* LD-TM refined brand identity */
 .brand{gap:12px}.brand-mark{width:48px;height:44px;border-radius:12px;background:linear-gradient(145deg,#0B1F44,#17417d);box-shadow:0 5px 14px #0b1f4426;font-size:20px;letter-spacing:-2px;position:relative}.brand-mark span{color:#60a5fa}.brand-name{font-size:19px;letter-spacing:1.2px;font-weight:800}.brand-name small{font-size:7px;letter-spacing:1.05px;margin-top:4px}.brand-footer .brand-mark{background:linear-gradient(145deg,#173663,#0B1F44)}
 @media(max-width:680px){.brand-mark{width:44px;height:41px}.brand-name{font-size:17px}.brand-name small{font-size:6.5px;letter-spacing:.8px}}
+
+
+/* Complete LD-TM wordmark sizing */
+.site-header .brand{display:flex;align-items:center;flex:0 1 auto;min-width:0;gap:0}
+.site-header .brand-logo{display:block;width:250px;height:auto;max-height:58px;object-fit:contain}
+.footer-main .brand-logo{display:block;width:250px;height:auto;max-height:58px;object-fit:contain}
+@media(max-width:850px){
+  .site-header .brand-logo{width:220px;max-height:52px}
+}
+@media(max-width:680px){
+  .site-header .brand-logo{width:190px;max-height:44px}
+  .footer-main .brand-logo{width:220px;max-height:50px}
+}
+@media(max-width:360px){
+  .site-header .brand-logo{width:165px;max-height:40px}
+}
