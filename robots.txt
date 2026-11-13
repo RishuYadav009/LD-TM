@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://rishuyadav009.github.io/LD-TM-sitemap.xml
+Sitemap: https://rishuyadav009.github.io/LD-TM-/sitemap.xml
